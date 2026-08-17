@@ -1,4 +1,5 @@
 import DB.printDB as printDB
+import Source.listManager as listManager
 
 class MainMenu:
 
@@ -6,6 +7,7 @@ class MainMenu:
 
     def __init__(self):
         self.printDB = printDB
+        self.listManager = listManager.ListManager()
 
     def display_main_menu(self):
         print(self.printDB.NewLine.new_line +
@@ -21,5 +23,21 @@ class MainMenu:
     def selectOption(self):
         self.option = input()
 
-        if self.option == 1:
-            print("Option 1 Seleceted")
+        if self.option == '1':
+            print("Viewing Tasks...")
+            self.listManager.print_task_list()
+        elif self.option == '2':
+            print("Option 2 Selected")
+            task = input("Enter a new task: ")
+            self.listManager.add_task(task)
+        elif self.option == '3':
+            print("Option 3 Selected")
+        elif self.option == '4':
+            print("Option 4 Selected")
+        elif self.option == '5':
+            print("Exiting the application...")
+            exit()
+        else:
+            print(self.printDB.ErrorMessages.invalid_input)
+            self.display_main_menu()
+            self.selectOption()
