@@ -6,6 +6,15 @@ class WelcomeMessages:
     welcome = "Welcome to PyToDo!"
     description = "PyToDo is a simple command-line to-do list application that helps you manage your tasks efficiently."
 
+class MainMenuMessages:
+    main_menu = "Main Menu"
+    options = ["1. View Tasks",
+               "2. Add Task",
+               "3. Edit Task",
+               "4. Delete Task",
+               "5. Exit"
+              ]
+
 class NewLine:
     new_line = "\n"
 
