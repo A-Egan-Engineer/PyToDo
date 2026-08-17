@@ -6,3 +6,4 @@ display_welcome.display_welcome_message()
 
 display_main_menu = mainMenu.MainMenu()
 display_main_menu.display_main_menu()
+display_main_menu.selectOption()

@@ -8,6 +8,7 @@ class WelcomeMessages:
 
 class MainMenuMessages:
     main_menu = "Main Menu"
+    select_option = "Please select and option from the below:"
     options = ["1. View Tasks",
                "2. Add Task",
                "3. Edit Task",
