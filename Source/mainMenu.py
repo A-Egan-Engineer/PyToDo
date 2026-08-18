@@ -26,14 +26,23 @@ class MainMenu:
         if self.option == '1':
             print("Viewing Tasks...")
             self.listManager.print_task_list()
+            self.display_main_menu()
+            self.selectOption()
         elif self.option == '2':
             print("Option 2 Selected")
             task = input("Enter a new task: ")
             self.listManager.add_task(task)
+            self.display_main_menu()
+            self.selectOption()
         elif self.option == '3':
             print("Option 3 Selected")
+            self.display_main_menu()
+            self.selectOption()
         elif self.option == '4':
             print("Option 4 Selected")
+            self.listManager.remove_task(task)
+            self.display_main_menu()
+            self.selectOption()
         elif self.option == '5':
             print("Exiting the application...")
             exit()

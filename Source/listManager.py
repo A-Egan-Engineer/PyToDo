@@ -13,9 +13,18 @@ class ListManager:
         else:
             print(printDB.ErrorMessages.invalid_input)
 
-    def print_task_list(self):
-        for task in self.taskDB.taskList:
-            if task is not None:
-                print(f"Task: {task}")
-            else:
-                print(printDB.ErrorMessages.task_list_empty)
+    def remove_task(self, task_id):
+        if 0 < task_id < len(self.taskDB.taskList):
+            removed_task = self.taskDB.taskList.pop(task_id)
+            print(f"Task '{removed_task}' removed successfully.")
+        else:
+            print(printDB.ErrorMessages.task_not_found)
+
+    def print_task_list(self,):
+        if len(self.taskDB.taskList) > 1:
+            print(printDB.NewLine.new_line + "Task List:")
+            for index, task in enumerate(self.taskDB.taskList[1:], start=1):
+                print(f"{index}. {task}")
+        else:
+            print(printDB.ErrorMessages.task_list_empty)
+        
