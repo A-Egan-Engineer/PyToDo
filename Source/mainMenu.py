@@ -36,6 +36,8 @@ class MainMenu:
             self.selectOption()
         elif self.option == '3':
             print("Option 3 Selected")
+            task_id = input("Update task: ")
+            self.listManager.edit_list(task_id)
             self.display_main_menu()
             self.selectOption()
         elif self.option == '4':

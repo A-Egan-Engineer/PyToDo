@@ -1,1 +1,1 @@
-taskList = [None]
+taskList = []

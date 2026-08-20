@@ -26,6 +26,7 @@ class ErrorMessages:
     task_list_empty = "Task list is empty. Please add a task first."
     database_error = "Database error. Please try again later."
 
+# Task edit/add/delete success messages
 class SuccessMessages:
     task_added = "Task added successfully."
     task_edited = "Task edited successfully."
