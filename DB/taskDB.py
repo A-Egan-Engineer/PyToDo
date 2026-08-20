@@ -1,1 +1,1 @@
-taskList = []
+taskList = ["empty"]
