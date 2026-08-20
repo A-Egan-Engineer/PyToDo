@@ -36,13 +36,14 @@ class MainMenu:
             self.selectOption()
         elif self.option == '3':
             print("Option 3 Selected")
-            task_id = input("Update task: ")
+            task_id = int(input("Enter the task ID to edit: "))
             self.listManager.edit_list(task_id)
             self.display_main_menu()
             self.selectOption()
         elif self.option == '4':
             print("Option 4 Selected")
-            self.listManager.remove_task(task)
+            task_id = int(input("Enter the task ID to remove: "))
+            self.listManager.remove_task(task_id)
             self.display_main_menu()
             self.selectOption()
         elif self.option == '5':
